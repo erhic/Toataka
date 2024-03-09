@@ -5,4 +5,20 @@ import Services from "./Services";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Blog from "./Blog";
-export { Hero, About, Product, Services, Contact, Footer, Blog };
+import Pickup from "../Components/Pickup";
+import Recycle from "../Components/Recycle";
+import Store from "../Components/Store";
+import Works from "./Works";
+export {
+  Hero,
+  About,
+  Product,
+  Services,
+  Contact,
+  Footer,
+  Blog,
+  Pickup,
+  Recycle,
+  Store,
+  Works,
+};

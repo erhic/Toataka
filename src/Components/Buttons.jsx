@@ -1,4 +1,4 @@
-'react'
+
 
 const Buttons = ({ label }) => {
   return (

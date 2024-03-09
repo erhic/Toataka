@@ -11,7 +11,7 @@ const About = () => {
             <h2 className="font-montserrat leading-8 flex justify-center font-semibold pb-3">
               {item.step}
             </h2>
-            <p className="font-palanquin text-base leading-6 text-slate-gray hover:text-gray-200">{item.description}</p>
+            <p className="font-palanquin text-base leading-6  hover:text-gray-200">{item.description}</p>
           </div>
         ))
       }
