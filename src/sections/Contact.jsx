@@ -2,7 +2,7 @@
 const Contact = () => {
   return (
     <section className="flex flex-row max-lg:flex-col gap-10 justify-between px-16 bg-green-900 text-white py-16 font-palanquin ">
-      <div className="max-w-[200px]">
+      <div className="max-w-[187px]">
         <h2 className="text-lg font-semibold pb-3">About Us</h2>
 
         <p>Factories can’t be recycling, which causes pollution.Industries do not focus on recycling; they concentrate only on the raw material.</p>
