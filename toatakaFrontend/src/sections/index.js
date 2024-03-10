@@ -9,6 +9,7 @@ import Pickup from "../Components/Pickup";
 import Recycle from "../Components/Recycle";
 import Store from "../Components/Store";
 import Works from "./Works";
+import Newsletter from "./Newsletter";
 export {
   Hero,
   About,
@@ -21,4 +22,5 @@ export {
   Recycle,
   Store,
   Works,
+  Newsletter,
 };
