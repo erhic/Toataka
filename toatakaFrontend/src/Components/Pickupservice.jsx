@@ -1,83 +1,70 @@
+import { useState } from "react"
+import { Address, Quantity, Servicetype, Wastetype } from "./OrderServices"
+
 const Pickupservice = () => {
+  const [page, setPage] = useState(1)
+
+  const nextPage = (page) => {
+    return page + 1
+  }
+  const prevPage = (page) => {
+    return page - 1
+  }
   return (
-    <section>
-      <h2 className="flex justify-center font-montserrat font-bold text-2xl text-green-900">Proceed to Order Service</h2>
-      <form action="" className="flex gap-10 justify-between p-5 border items-start">
-        <div className="p-5  flex flex-col justify-center gap-5">
-          <h2>Service Type</h2>
-          <div className="flex items-center ">
-            <input id="default-radio-1" type="radio" value="" name="default-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-            <label htmlFor="default-radio-1" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Pick Up</label>
-          </div>
-          <div className="flex items-center">
-            <input checked id="default-radio-2" type="radio" value="" name="default-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-            <label htmlFor="default-radio-2" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Storage Rental</label>
-          </div>
-          <div className="flex items-center">
-            <input checked id="default-radio-2" type="radio" value="" name="default-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-            <label htmlFor="default-radio-2" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Recycle</label>
-          </div>
 
-        </div>
-        <div className="p-5   flex flex-col justify-center">
-          <h2 className="flex justify-center">Quantity (Kgs)</h2>
-          <input type="number" className="flex justify-center border-b py-3" placeholder="Enter quantity here" />
-          <p className="font-montserrat pt-5 text-slate-gray">Packaging ?</p>
-          <div className="flex justify-center flex-col gap-10 py-7">
-
-            <div className="flex items-center  ">
-              <input id="default-radio-1" type="radio" value="" name="default-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-              <label htmlFor="default-radio-1" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Containers</label>
+    <section className="min-h-[340px] ">
+      <h2 className="flex justify-center font-montserrat font-bold text-2xl  pb-5 text-green-900">Proceed to Order Service</h2>
+      <div className="flex justify-start w-4/5 max-container">
+        {
+          page == 1 ?
+            <div className="flex m-4 justify-between">
+              <p className="flex justify-center p-3 bg-green-800 text-white  font-bold  text-lg  font-montserrat rounded-full max-h-[32px] items-center max-w-[58px]">{1}
+              </p>
             </div>
-            <div className="flex items-center">
-              <input checked id="default-radio-2" type="radio" value="" name="default-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-              <label htmlFor="default-radio-2" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Cartons</label>
-            </div>
-            <div className="flex items-center">
-              <input checked id="default-radio-2" type="radio" value="" name="default-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-              <label htmlFor="default-radio-2" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Waste Bags</label>
-            </div>
+            :
 
-          </div>
+            page == 2 ?
+              <div className="flex m-4  gap-40">
+                <p className="flex justify-center p-3 bg-green-800 text-white    text-lg  font-montserrat rounded-full items-center max-h-[36px] max-w-[50px]"><span className="text-[16px]" >✔</span></p>
+                <p className="flex justify-center p-3 bg-green-800 text-white  font-bold  text-lg  font-montserrat rounded-full items-center max-h-[36px] max-w-[50px]">{2}</p>
+              </div>
+              :
+              page == 3 ?
+                <div className="flex m-4 gap-40 ">
+                  <p className="flex justify-center p-3 bg-green-800 text-white  font-bold  text-lg  font-montserrat rounded-full items-center max-h-[36px] max-w-[50px]"><span className="text-[16px]" >✔</span></p>
+                  <p className="flex justify-center p-3 bg-green-800 text-white  font-bold  text-lg  font-montserrat rounded-full items-center max-h-[36px] max-w-[50px]"><span className="text-[16px]" >✔</span></p>
+                  <p className="flex justify-center p-3 bg-green-800 text-white  font-bold  text-lg  font-montserrat rounded-full items-center max-h-[36px] max-w-[50px]">{3}</p>
+                </div>
+                :
+                <div className="flex m-4 gap-40">
+                  <p className="flex justify-center p-3 bg-green-800 text-white  font-bold  text-lg  font-montserrat rounded-full items-center max-h-[36px] max-w-[50px]"><span className="text-[16px]" >✔</span></p>
+                  <p className="flex justify-center p-3 bg-green-800 text-white  font-bold  text-lg  font-montserrat rounded-full items-center max-h-[36px] max-w-[50px]"><span className="text-[16px]" >✔</span></p>
+                  <p className="flex justify-center p-3 bg-green-800 text-white  font-bold  text-lg  font-montserrat rounded-full items-center max-h-[36px] max-w-[50px]"><span className="text-[16px]" >✔</span></p>
+                  <p className="flex justify-center p-3 bg-green-800 text-white  font-bold  text-lg  font-montserrat rounded-full items-center max-h-[36px] max-w-[50px]">{4}</p>
+                </div>
+        }
+      </div>
+      <div action="" className="flex gap-10 justify-center p-5 border items-start  ">
 
+        {
+          page == 1 ? <Servicetype /> : page == 2 ? <Quantity /> : page == 3 ? <Wastetype /> : <Address />
+        }
 
-        </div>
-        <div className="p-5   flex flex-col justify-center">
-          <h2 className="flex justify-center">Type of Waste</h2>
+      </div>
 
-          <p className="font-montserrat pt-5 text-slate-gray">Waste Components ?</p>
-          <div className="flex justify-center gap-10 py-7 flex-col">
+      <div className=" flex justify-center  gap-10 px-16">
+        {
+          page > 1 && (
+            <button className="bg-green-800 text-white px-4 py-1 rounded-full mt-4" onClick={() => { setPage(prevPage) }}>Prev</button>
+          )
+        }
 
-            <div className="flex items-center ">
-              <input id="default-radio-1" type="radio" value="" name="default-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-              <label htmlFor="default-radio-1" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Medical Waste</label>
-            </div>
-            <div className="flex items-center">
-              <input checked id="default-radio-2" type="radio" value="" name="default-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-              <label htmlFor="default-radio-2" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Kitchen Waste</label>
-            </div>
-            <div className="flex items-center">
-              <input checked id="default-radio-2" type="radio" value="" name="default-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-              <label htmlFor="default-radio-2" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Organic Waste</label>
-            </div>
-            <div className="flex items-center">
-              <input checked id="default-radio-2" type="radio" value="" name="default-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-              <label htmlFor="default-radio-2" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Organic Waste</label>
-            </div>
+        {
+          page < 4 && (
+            <button className="bg-green-800 text-white px-4 py-1 rounded-full mt-4" onClick={() => { setPage(nextPage) }}>Next</button>
+          )}
 
-          </div>
-
-
-
-        </div>
-        <div className="p-5  justify-center">
-          <h2>Address</h2>
-          <input type="text" placeholder="Enter phone no" />
-          <input type="text" placeholder="Enter location " />
-          <input type="text" placeholder="Enter " />
-        </div>
-      </form>
-
+      </div>
     </section>
   )
 }
