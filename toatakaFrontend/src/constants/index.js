@@ -12,16 +12,15 @@ export const heroBtn = [{ label: "Order Pickup", href: "", btnIcon: "" }];
 export const onboard = [
   {
     step: "Account Registration",
-    description:
-      " We value your identity ,help us know who , where you need this service",
+    description: " Let us know who , where you need this service",
   },
   {
     step: "Request Service",
-    description: " You request ,we deliver our services at your door step",
+    description: " You request ,we deliver at your door step",
   },
   {
     step: "Order Pickup",
-    description: "We are standby waiting for you to click that button .",
+    description: "Standby waiting for you to click that button .",
   },
 ];
 
@@ -85,8 +84,7 @@ export const recycling = [
           "When you refuse to reuse, it's our Earth you abuse. Why recycle glass? The answer is clear.",
       },
       {
-        keypoint:
-          "You can't change the past but you can change the future always remember to recycle.",
+        keypoint: "You can't change the past but you can change the future ",
       },
     ],
   },
@@ -96,4 +94,25 @@ export const services = [
   { label: pickup },
   { label: rental },
   { label: recycling },
+];
+
+export const blog = [
+  {
+    personName: "Moses K",
+    image: "",
+    comment:
+      "There are been an increasing of waste in our company after production due high product consumption ,this is the best solution  ",
+  },
+  {
+    personName: "Ken P",
+    image: "",
+    comment:
+      "I have always had challenges on where to dispose the electronic waste  , the waste can't discompose, I have waited for a such solution. ",
+  },
+  {
+    personName: "Robert G",
+    image: "",
+    comment:
+      "Waste material from kitchen waste can be use for manure or even animals feeds. I am looking forward to get more waste from you and recycle in my farm. ",
+  },
 ];

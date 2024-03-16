@@ -4,9 +4,9 @@ import { storage, wastedumpsite } from "../assets/images"
 const Works = () => {
   return (
     <>
-      <h2 className="font-montserrat  text-slate-gray text-2xl  pb-10 flex justify-center font-semibold">Our Stories</h2>
 
-      <section className="flex flex-row max-lg:flex-col gap-10  justify-center flex-wrap">
+
+      <section className="flex flex-row w-5/5 gap-10 max-container  justify-center flex-wrap">
         <div className="border max-w-[250px]">
           <div className="h-full max-h-[145px]">
             <img className="h-full " src={wastedumpsite} width={267} height={250} alt="" />

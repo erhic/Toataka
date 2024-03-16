@@ -20,7 +20,9 @@ const Nav = () => {
                 </li>
               ))
 
-            }</ul>
+            }
+            <button className="px-4 border py-2 font-montserrat font-bold text-white bg-green-900 rounded-lg">FUND</button>
+          </ul>
           <div className="hidden max-lg:block">
             <img src={hamburger} alt="" width={25} height={25} />
           </div>
