@@ -1,8 +1,12 @@
 import { blog } from "../constants"
 
 const Blog = () => {
-  return (
+
+
+  return (<>
+    <h2 className="flex justify-center font-montserrat font-semibold text-2xl pb-6 text-slate-gray">What the Say</h2>
     <section className="flex flex-wrap w-5/5  max-container justify-center gap-10">
+
       {
         blog.map((item) => (
           <>
@@ -21,6 +25,8 @@ const Blog = () => {
 
 
     </section>
+
+  </>
   )
 }
 
