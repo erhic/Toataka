@@ -1,6 +1,7 @@
 import About from "./About"
 import Blog from "./Blog"
 import Contact from "./Contact"
+import Footer from "./Footer"
 import Hero from "./Hero"
 import Newsletter from "./Newsletter"
 import Product from "./Product"
@@ -23,6 +24,7 @@ const Home = () => {
         <Works /> </section>
       <section className="padding "><Newsletter /> </section>
       <section className=""><Contact /></section>
+      <section className=""><Footer /></section>
     </>
   )
 }
